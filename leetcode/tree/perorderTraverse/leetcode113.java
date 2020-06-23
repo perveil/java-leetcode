@@ -1,6 +1,6 @@
-package leetcode.tree.perorderTraverse;
+package tree.perorderTraverse;
 
-import dataStructrue.tree.CreateTree;
+
 import leetcode.tree.TreeNode;
 import java.util.*;
 /*

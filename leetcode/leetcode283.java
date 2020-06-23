@@ -1,5 +1,3 @@
-package leetcode;
-
 public class leetcode283 {
     public void moveZeroes(int[] nums) {
         int num=0;
