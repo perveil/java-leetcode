@@ -1,4 +1,4 @@
-package leetcode.binarySearch;
+package binarySearch;
 
 public class leetcode33 {
     public int search(int[] nums, int target) {
@@ -9,7 +9,7 @@ public class leetcode33 {
             if(nums[mid]==target){
                 return mid;
             }
-            if(nums[left]<=nums[mid]) //右边升序
+            if(nums[left]<=nums[mid]) //左边升序
             {
                 if(target>=nums[left]&& target<nums[mid]){
                     right=mid-1;
@@ -17,7 +17,7 @@ public class leetcode33 {
                 else{
                     left=mid+1; //只能从右边找
                 }
-            }else{ //左边升序
+            }else{ //右边升序
                 if(target>nums[mid]&& target<=nums[right]){
                     left=mid+1;
                 }else{

@@ -1,4 +1,4 @@
-package leetcode.dfs;
+package dfs;
 
 public class leetcode547 {
     public void dfs(int[][] M, int[] visited, int i) {

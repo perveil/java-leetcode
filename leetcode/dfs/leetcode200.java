@@ -1,4 +1,4 @@
-package leetcode.dfs;
+package dfs;
 /*
 * 两种思路：
 *  1.dfs/bfs

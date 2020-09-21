@@ -1,6 +1,6 @@
-package leetcode.dfs;
+package dfs;
 
-public class leetcode130 {
+public class leetcode130_被围绕的区域 {
     public void solve(char[][] board) {
         if (board == null || board.length == 0) return;
         int m = board.length;

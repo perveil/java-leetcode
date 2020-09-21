@@ -1,4 +1,4 @@
-package leetcode.bfs;
+package bfs;
 
 import java.util.LinkedList;
 
@@ -30,7 +30,7 @@ public class leetcode200_岛屿数量 {
                             int newX = curX + directions[k][0];
                             int newY = curY + directions[k][1];
                             if (inArea(newX, newY) && grid[newX][newY] == '1' && !marked[newX][newY]) {
-                                queue.addLast(newX * cols + newY);
+                                queue.addLast(newX * cols + newY); //新节点入队
                                 marked[newX][newY] = true;
                             }
                         }

@@ -1,4 +1,4 @@
-package leetcode.sort.quicksort;
+package sort.quicksort;
 
 import java.util.Arrays;
 
@@ -27,7 +27,7 @@ public class interview40_前K个最小元素 {
     private int partition(int[] nums, int lo, int hi) {
         int v = nums[lo];
         int i = lo, j = hi + 1;
-        while (true) {
+        while (i<j) {
             while (++i <= hi && nums[i] < v); //找到大于v的值
             while (--j >= lo && nums[j] > v); //找到小于v的值
             if (i >= j) {
