@@ -15,7 +15,7 @@ public class test {
 //            System.out.println(Arrays.toString(numbers));
 //        }
           //String
-         String s="abc";
-         System.out.println(s.substring(0,2));
+         String s=""+1;
+         System.out.println(s);
     }
 }
