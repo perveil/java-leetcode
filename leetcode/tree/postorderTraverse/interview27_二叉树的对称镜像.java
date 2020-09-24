@@ -1,6 +1,6 @@
-package leetcode.tree.postorderTraverse;
+package tree.postorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 public class interview27_二叉树的对称镜像 {
     /*

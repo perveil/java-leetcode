@@ -1,8 +1,9 @@
-package leetcode.tree;
+package tree;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import tree.*;
 /*
 *          3(0,0)
 *  9(-1,1)         20(1,1)

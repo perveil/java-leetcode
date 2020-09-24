@@ -1,7 +1,8 @@
-package leetcode.tree;
+package tree;
 /*
 * *  根据后序遍历、中序遍历构造二叉树
 * */
+import tree.*;
 public class leetcode106 {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         if(postorder.length==0||inorder.length==0) return null;

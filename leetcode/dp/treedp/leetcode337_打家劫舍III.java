@@ -1,6 +1,6 @@
-package leetcode.dp.treedp;
+package dp.treedp;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 import java.util.HashMap;
 

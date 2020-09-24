@@ -1,10 +1,10 @@
-package leetcode.tree;/*
+package tree;/*
   @Date:2020/4/22 9:22
   @Author:Administrator
 */
 
 import java.util.*;
-
+import tree.*;
 public class leetcode545_二叉树的边界 {
     /*
     *   依次寻找左边界、右边界和叶子节点

@@ -1,7 +1,8 @@
-package leetcode.tree;
+package tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import tree.*;
 
 public class leetcode297_二叉树的序列化和反序列化 {
     public String serialize(TreeNode root) {

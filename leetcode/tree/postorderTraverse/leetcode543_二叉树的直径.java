@@ -1,6 +1,6 @@
-package leetcode.tree.postorderTraverse;
+package postorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 public class leetcode543_二叉树的直径 {
     int ans=0;

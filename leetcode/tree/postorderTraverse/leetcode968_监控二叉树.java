@@ -5,6 +5,7 @@ package tree.postorderTraverse;
 */
 
 import java.util.*;
+import tree.*;
 public class leetcode968_监控二叉树 {
     /*
     * 0=>这个结点待覆盖
@@ -12,7 +13,7 @@ public class leetcode968_监控二叉树 {
     * 2=>这个结点上安装了相机
     * */
     int res=0;
-    public int minCameraCover(leetcode.tree.TreeNode root) {
+    public int minCameraCover(tree.TreeNode root) {
         if (postOrder(root)==0){ //如果根节点是待覆盖的
             res++;
         }
@@ -22,7 +23,7 @@ public class leetcode968_监控二叉树 {
     *  return：返回的是当前节点的状态，0，1，2
     *
     * */
-    int postOrder(leetcode.tree.TreeNode node) {
+    int postOrder(tree.TreeNode node) {
         if (node==null){
             return 1;
         }

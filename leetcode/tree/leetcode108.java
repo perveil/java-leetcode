@@ -1,10 +1,13 @@
-package leetcode.tree;
+package tree;
+
+import tree.TreeNode;
+
 /*
 *  有序数组构造平衡二叉树
 *
 * */
 public class leetcode108 {
-    public TreeNode buildSubTree(int[] nums,int start,int end) {
+    public TreeNode buildSubTree(int[] nums, int start, int end) {
         if(start>end) return null;
         int middle=(start+end)/2;
         TreeNode root=new TreeNode(nums[middle]); //构建根节点

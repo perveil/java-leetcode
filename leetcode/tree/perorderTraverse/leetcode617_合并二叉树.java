@@ -1,6 +1,6 @@
-package leetcode.tree.perorderTraverse;
+package tree.perorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 public class leetcode617_合并二叉树 {
     //t2 向t1 合并

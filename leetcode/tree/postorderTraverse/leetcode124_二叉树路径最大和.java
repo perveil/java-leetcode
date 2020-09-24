@@ -1,6 +1,6 @@
-package leetcode.tree.postorderTraverse;
+package tree.postorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 public class leetcode124_二叉树路径最大和 {
     int max_sum = Integer.MIN_VALUE;

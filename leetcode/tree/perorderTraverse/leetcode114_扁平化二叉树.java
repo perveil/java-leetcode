@@ -1,6 +1,6 @@
-package leetcode.tree.perorderTraverse;
+package tree.perorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 public class leetcode114_扁平化二叉树 {
     public void flatten(TreeNode root) {

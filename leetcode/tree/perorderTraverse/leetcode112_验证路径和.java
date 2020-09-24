@@ -1,6 +1,6 @@
-package leetcode.tree.perorderTraverse;
+package tree.perorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 /*
 * 先序遍历
 * */

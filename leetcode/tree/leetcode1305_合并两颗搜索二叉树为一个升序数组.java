@@ -1,8 +1,8 @@
-package leetcode.tree;
+package tree;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import tree.*;
 public class leetcode1305_合并两颗搜索二叉树为一个升序数组 {
     /*
      * 中序遍历+归并

@@ -1,11 +1,11 @@
-package leetcode.tree.inorderTraverse;
+package tree.inorderTraverse;
 /*
   @Date:2020/4/25 9:16
   @Author:Administrator
 */
 
 import java.util.*;
-import leetcode.tree.*;
+import tree.*;
 /*
 * 中序遍历之后的二叉树是有序的，交换完结点的二叉树有两个逆序对
 * 1 2 3 4 5  -》1 4 3 2 5  =》第一个逆序对（4,3） 第二个逆序对 (3,2)

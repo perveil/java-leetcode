@@ -1,6 +1,6 @@
-package leetcode;
 
-import leetcode.tree.TreeNode;
+
+import tree.TreeNode;
 
 public class leetcode104 {
     static class Solution {

@@ -1,6 +1,6 @@
-package leetcode.tree.inorderTraverse;
+package tree.inorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 /*
 * 中序遍历，从大到小的遍历二叉树过程中sum叠加，当遍历到cur时，

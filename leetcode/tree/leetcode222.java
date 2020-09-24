@@ -1,5 +1,5 @@
-package leetcode.tree;
-
+package tree;
+import tree.*;
 public class leetcode222 {
     /*
     * 常规解法

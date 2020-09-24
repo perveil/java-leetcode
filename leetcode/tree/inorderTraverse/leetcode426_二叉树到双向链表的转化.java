@@ -1,9 +1,9 @@
-package leetcode.tree.inorderTraverse;/*
+package tree.inorderTraverse;/*
   @Date:2020/4/24 10:31
   @Author:Administrator
 */
 
-import leetcode.tree.TreeNode;
+import tree.*;
 
 import java.util.*;
 

@@ -1,7 +1,7 @@
 package tree.perorderTraverse;
 
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 import java.util.*;
 /*
 * 回溯

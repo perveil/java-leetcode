@@ -1,6 +1,6 @@
-package leetcode.tree.inorderTraverse;
+package tree.inorderTraverse;
 
-import leetcode.tree.TreeNode;
+import tree.TreeNode;
 
 import java.util.Stack;
 

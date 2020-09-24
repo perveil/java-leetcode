@@ -1,4 +1,4 @@
-package leetcode.tree;
+package tree;
 /*
 *  根据前序遍历、中序遍历构造二叉树
 * */
