@@ -8,7 +8,6 @@ import java.util.*;
 public class leetcode496_下一个更大元素 {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int[] res=new int[nums1.length];
-        int resi=0;
         Stack<Integer> stack=new Stack<>();
         HashMap<Integer,Integer>  map=new HashMap<>();
         for (Integer num:nums2) { //单调递减栈，查找大于某数的右边第一个数

@@ -15,7 +15,10 @@ public class test {
 //            System.out.println(Arrays.toString(numbers));
 //        }
           //String
-         String s=""+1;
-         System.out.println(s);
+        Queue<Integer> queue=new ArrayDeque<>();
+        queue.add(1);
+        queue.add(2);
+        List<Integer> list=new ArrayList<>(queue);
+        System.out.println(list.get(0));
     }
 }
