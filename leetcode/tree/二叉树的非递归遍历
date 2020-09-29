@@ -1,0 +1,70 @@
+```java
+ class TreeTravel{
+    //前序非递归遍历
+    public static List<Integer> preOrder(TreeNode root){
+             List<Integer> list = new ArrayList();
+             Stack<TreeNode> stack = new Stack();
+             TreeNode cur = root;
+             while(cur!=null || !stack.isEmpty()){
+                 //一直往左压入栈
+                 while(cur!=null){
+                     list.add(cur.val); //！
+                     stack.push(cur);
+                     cur = cur.left;
+                 }
+                 cur = stack.pop();
+                 cur = cur.right;
+             }
+             return list;
+    }
+   //中序
+   public List<Integer> inorderTraversal(TreeNode root) {
+        if(root == null){
+            return new ArrayList();
+        }
+        List<Integer> list = new ArrayList();
+        Stack<TreeNode> stack = new Stack();
+        TreeNode cur = root;
+        while(cur != null || !stack.isEmpty()){
+            while(cur!=null){  //左子树全进栈，先遍历左子树
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            list.add(cur.val); //！ 与前序相比较
+            cur = cur.right;
+        }
+        return list;
+    }
+    //后序遍历
+    public List<Integer> postorderOfNorecurs(TreeNode root) {
+        TreeNode p = root,r = null;
+        //p:当前访问节点  r：访问p的之前一个节点
+        List<Integer>ans = new ArrayList();
+        Deque<TreeNode>s = new ArrayDeque();
+        while(!s.isEmpty() || p != null){
+            if(p != null)
+            {
+                s.push(p);
+                p = p.left;
+            }else{
+                p=s.peek();
+                if (p.right==null || p.right==r){
+                    //当p.right为null，或者此节点之前访问的节点是p的右子节点，说明当前节点访问结束
+                    ans.add(p.val);
+                    r=p;
+                    s.poll();
+                    p=null; //当前节点访问结束之后，需要
+                }else{
+                    p=p.right; //向右子树转移
+                }
+
+            }
+        }
+        return ans;
+    }
+
+
+  }
+
+```

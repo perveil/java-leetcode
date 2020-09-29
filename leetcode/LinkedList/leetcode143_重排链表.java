@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package LinkedList;
 /*
   @Date:2020/4/27 16:12
   @Author:Administrator

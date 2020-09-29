@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package LinkedList;
 
 public class leetcode1290_二进制链表转整数 {
     public int getDecimalValue(ListNode head) {

@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package LinkedList;
 
 public class leetcode725_分隔链表 {
     public static void main(String[] args) {

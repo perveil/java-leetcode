@@ -1,9 +1,9 @@
-package leetcode.sort.mergesort;/*
+package sort.mergesort;/*
   @Date:2020/4/26 9:49
   @Author:Administrator
 */
 
-import leetcode.LinkedList.ListNode;
+import LinkedList.ListNode;
 
 import java.util.*;
 

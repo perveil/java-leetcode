@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package LinkedList;
 
 public class leetcode61 {
     public static void main(String[] args) {

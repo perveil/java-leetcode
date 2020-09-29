@@ -4,7 +4,7 @@ package leetcode.sort.mergesort;
   @Author:Administrator
 */
 
-import leetcode.LinkedList.ListNode;
+import LinkedList.ListNode;
 
 import java.util.*;
 

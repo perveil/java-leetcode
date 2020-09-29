@@ -1,11 +1,11 @@
-package leetcode.LinkedList;
+package LinkedList;
 
 import java.util.Stack;
 
 /*
 *  链表排序 ->选择排序/归并排序
 * */
-public class leetcode147Or148 {
+public class leetcode147Or148_链表排序 {
     /*
       选择排序,双栈 退栈进栈解决-->超出内存限制
      */
@@ -49,19 +49,19 @@ public class leetcode147Or148 {
         ListNode complete = head;  //complete 已经完成的链表的头节点
         ListNode execute  = head.next;  //待排序的链表
         complete.next=null;
-        if(null == execute) return complete;
+        if(null == execute) return complete;//只有一个节点
         do{
             ListNode node=execute;
             execute=execute.next;
             ListNode prev=null;  //遍历complete 链表的之前的指针
             ListNode next=complete;
-            while (next!=null&&next.val<node.val){
+            while (next!=null&&next.val<node.val){//从complete 链表
                 prev=next;
                 next=next.next;
             }
             if (prev!=null) {   //complete节点的前边是null
                 prev.next=node;
-            }else
+            }else  //如果需要在头部插入
                 complete=node;
             node.next=next;  //连接断开的complete链表
         }while (execute!=null);
@@ -84,7 +84,7 @@ public class leetcode147Or148 {
             fast = fast.next.next;
         }
         ListNode head2=slow.next;
-        slow.next=null;
+        slow.next=null; //断链
         /*
         * 递归划分
         * */
@@ -115,6 +115,6 @@ public class leetcode147Or148 {
 
     public static void main(String[] args) {
         ListNode input=new ListNode(1).stringToListNode("[5,5,4,3,8]");
-        new leetcode147Or148().insertionSortList(input);
+        new LinkedList.leetcode147Or148_链表排序().insertionSortList(input);
     }
 }

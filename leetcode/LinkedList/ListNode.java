@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package LinkedList;
 
 
 public class ListNode {

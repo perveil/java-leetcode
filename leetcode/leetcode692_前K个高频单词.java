@@ -1,9 +1,9 @@
-package leetcode;/*
+/*
   @Date:2020/4/26 9:57
   @Author:Administrator
 */
 
-import leetcode.LinkedList.ListNode;
+import LinkedList.ListNode;
 
 import java.util.*;
 /*

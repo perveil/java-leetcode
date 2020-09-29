@@ -1,4 +1,4 @@
-package leetcode.LinkedList;
+package LinkedList;
 /*
 *  反转链表的拓展
 * */
