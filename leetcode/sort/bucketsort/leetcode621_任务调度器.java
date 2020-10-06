@@ -1,4 +1,4 @@
-package leetcode.sort.bucketsort;
+package sort.bucketsort;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

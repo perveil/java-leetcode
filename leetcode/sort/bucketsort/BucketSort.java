@@ -1,4 +1,4 @@
-package leetcode.sort.bucketsort;
+package sort.bucketsort;
 
 public class BucketSort {
     public int[] sortArray(int[] nums) {
