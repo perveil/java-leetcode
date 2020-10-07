@@ -5,9 +5,10 @@ package sort.quicksort;
 public class leetcode912_排序算法 {
     public void quicksort(){
         int []nums=new int[]{
-                5,2,3,1
+                5,2,3,1,1,0,0
         };
         quicksorthelper(nums,0,nums.length-1);
+        System.out.println("r");
     }
     public void quicksorthelper(int [] nums,int start,int end){
         int privot=nums[start];
