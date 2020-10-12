@@ -1,5 +1,9 @@
 package tree;
 import tree.*;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class leetcode222 {
     /*
     * 常规解法
