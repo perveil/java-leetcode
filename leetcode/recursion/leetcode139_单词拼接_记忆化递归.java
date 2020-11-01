@@ -1,5 +1,6 @@
-package leetcode;
+package recursion;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -9,17 +10,16 @@ public class leetcode139_单词拼接_记忆化递归 {
      * 若干个wordDict 中所有的单词 是否可以拼接成s
      * */
      HashMap<Integer,Boolean> map = new HashMap<>(); //Integer i,boolean true 指的是从i开始之后的字符串是否可以由wordDict 组成
-     List<String> dict;
+     List<Integer> word_len;
     public boolean wordBreak(String s, List<String> wordDict) {
-        this.dict=wordDict;
-        int max=Integer.MIN_VALUE;
+        this.word_len=new ArrayList<>();
         for (String w: wordDict) {
-            max=Math.max(w.length(),max);
+            word_len.add(w.length());
         }
-        return getResult(s,0,max);
+        return getResult(s,0,wordDict);
 
     }
-    private boolean getResult(String s, int start,int max) {
+    private boolean getResult(String s, int start,List<String> wordDict) {
         if (start==s.length()){
             return true;
         }
@@ -27,17 +27,18 @@ public class leetcode139_单词拼接_记忆化递归 {
             return map.get(start);
         }
         /*
-        * 每个可能的单词都不能超过max代表的长度
+        * 遍历所有的单词长度
         * */
-        for (int i = start; i <start+max&&i<s.length() ; i++) {
-            if (dict.contains(s.substring(start,i+1))){
-                if (getResult(s,i+1,max)){
+        for (int len: word_len) {
+            if (start+len>s.length()) continue;
+            if (wordDict.contains(s.substring(start,start+len))){
+                if (getResult(s,start+len,wordDict)){
                     map.put(start,true);
                     return true;
                 }
             }
         }
-        map.put(start,false);
+        map.put(start,false); //回溯
         return false;
     }
 

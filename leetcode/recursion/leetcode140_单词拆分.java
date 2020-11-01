@@ -1,4 +1,4 @@
-package leetcode.traceBack;
+package recursion;
 import java.util.*;
 
 public class leetcode140_单词拆分 {
@@ -8,8 +8,7 @@ public class leetcode140_单词拆分 {
     Map<Integer,List<String>> map=new HashMap<>(); //使用HashMap（key:value）: key:起始位置，value：从起始位置开始到字符串的末尾，所有可能的字符串
     Set<Integer> wordlenList=new HashSet<>(); //获得各个word的长度
     public List<String> wordBreak(String s, List<String> wordDict) {
-        for (String s1:
-             wordDict) {
+        for (String s1: wordDict) {
             wordlenList.add(s1.length());
         }
         List<String> res=helper(0,s,wordDict);
