@@ -1,9 +1,15 @@
-package LinkedList;/*
+package 前缀和;
+/*
   @Date:2020/10/31 13:27
   @Author:Administrator
 */
 
 import java.util.*;
+class ListNode {
+    public int val;
+    public ListNode next;
+    public ListNode(int x) { val = x; }
+}
 public class leetcode1171_从链表中删去总和值为零的连续节点 {
     /*
     * 尝试滑动窗口失败
@@ -59,8 +65,5 @@ public class leetcode1171_从链表中删去总和值为零的连续节点 {
 
         return dummy.next;
 
-    }
-    public static void main(String[] args) {
-        new leetcode1171_从链表中删去总和值为零的连续节点().removeZeroSumSublists(ListNode.stringToListNode("[1,2,3,-3,-2]"));
     }
 }
