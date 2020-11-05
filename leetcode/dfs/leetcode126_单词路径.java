@@ -2,22 +2,18 @@ package dfs;
 
 import java.util.*;
 
-public class leetcode126Or127 {
+public class leetcode126_单词路径 {
     List<List<String>> minLenPaths =new LinkedList<>();
-    /*
-    *   leetcode 127=>抽象成一个无向无权图，每一个节点的内容是Str，每一个节点的相邻节点是与其只相差一个字符的Str
-    *   首先构造无向无权图的邻接表
-    * */
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        if(wordList.indexOf(endWord)==-1) return 0;
-        /*
-        * 构造邻接表
-        * */
+    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        if(wordList.indexOf(endWord)==-1) return minLenPaths;
         Map<String,List<String>> neborMap=new HashMap<>(); //此无向无权图的邻接表
+        HashMap<String, Boolean> visited = new HashMap<>();
         List<String> similarWordList=similarWordList(beginWord,wordList); //获得beginWord 所有nextword
         neborMap.put(beginWord,similarWordList);
+        visited.put(beginWord,false);
         for (String s:wordList) {
             neborMap.put(s,similarWordList(s,wordList));
+            visited.put(s,false);
         }
         HashMap<String, Integer> dist = new HashMap<String, Integer>();
         dist.put(beginWord,1);
@@ -25,12 +21,12 @@ public class leetcode126Or127 {
         /*
         * dfs findPaths
         * */
-        HashMap<String, Boolean> visited = new HashMap<String, Boolean>();
-        List<String> path=new ArrayList<>();
-        visited.put(beginWord,true); //首节点被访问
-        dfs_path(neborMap.get(beginWord).get(0),endWord,neborMap,visited,len,1,path);
 
-        return len;
+        List<String> path=new LinkedList<>();
+        visited.put(beginWord,true);
+        path.add(beginWord);
+        dfs_path(beginWord,endWord,neborMap,visited,len,1,path);
+        return minLenPaths;
 
     }
     /*
@@ -51,6 +47,7 @@ public class leetcode126Or127 {
         for (int i = 0; i <beginWord.length(); i++) {
             if (beginWord.charAt(i)!=endWord.charAt(i))
                 nums++;
+            if (nums>=2) return false;
         }
         return nums==1;
     }
@@ -74,18 +71,18 @@ public class leetcode126Or127 {
     * leetcode 126 dfs 寻找路径长度为len的路径
     * */
     public void dfs_path(String beginWord, String endWord, Map<String,List<String>> neborMap,HashMap<String, Boolean> visited,int len,int curlen,List<String> path) {
-        if (!visited.containsKey(beginWord)){
-            visited.put(beginWord,true);
-            path.add(beginWord);
-            for (String s:
-                 neborMap.get(beginWord)) {
-                  if (!visited.containsKey(s)){
-                      if (s==endWord && curlen==len) minLenPaths.add(path);
-                      dfs_path(s,endWord,neborMap,visited,len,curlen+1,path);  //递归
-                  }
-            }
+        if (beginWord.equals(endWord) && curlen==len){
+            minLenPaths.add(new ArrayList<>(path));
+            return;
         }
-
+        for (String s: neborMap.get(beginWord)) {
+            if (visited.get(s)) continue; //已访问过，直接跳过
+            visited.put(s,true);
+            path.add(s);
+            dfs_path(s,endWord,neborMap,visited,len,curlen+1,path);  //递归
+            visited.put(s,false);  //回溯
+            path.remove(path.size()-1);
+        }
     }
 
     public static void main(String[] args) {
@@ -96,9 +93,8 @@ public class leetcode126Or127 {
         for (String s: strs) {
             list.add(s);
         }
-       int minlength=new leetcode126Or127().ladderLength("hit","cog",
-           list
-        );
-        System.out.println(minlength);
+      new leetcode126_单词路径().findLadders("hit","cog", list);
+
+
     }
 }
