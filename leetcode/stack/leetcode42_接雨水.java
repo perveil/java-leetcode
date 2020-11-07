@@ -1,4 +1,4 @@
-package leetcode.stack;
+package stack;
 
 import java.util.Map;
 import java.util.Stack;
@@ -60,9 +60,9 @@ public class leetcode42_接雨水 {
     }
 
     /*
-    * 单调栈解法
-    *
-    * */
+     * 单调栈解法
+     *
+     * */
     public int trap(int[] height) {
         if (height==null) return 0;
         int res=0;
