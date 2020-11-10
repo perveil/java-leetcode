@@ -24,18 +24,16 @@ public class leetcode31_下一个排列 {
             nums[j]=nums[(i+len-1)-j];
             nums[(i+len-1)-j]=temp;
         }
-        if (i>0){
-            for (int j = i; j <len ; j++) {
-                if(nums[j]>nums[i-1]){
-                    int temp=nums[i-1];
-                    nums[i-1]=nums[j];
-                    nums[j]=temp;
+        if (i>0) {
+            for (int j = i; j < len; j++) {
+                if (nums[j] > nums[i - 1]) {
+                    int temp = nums[i - 1];
+                    nums[i - 1] = nums[j];
+                    nums[j] = temp;
                     break;
                 }
 
             }
         }
-
-        
     }
 }
