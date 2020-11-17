@@ -1,4 +1,4 @@
-package leetcode.bfs;
+package bfs;
 
 /*
 *  多源bfs
