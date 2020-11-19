@@ -14,7 +14,7 @@ public class leetcode986_区间列表的交集 {
             if (left<=right){
                 res.add(new int[]{left,right});
             }
-            if (A[i][1]<B[j][1]){ //留下右侧边界最远的
+            if (A[i][1]<B[j][1]){ //留下右侧边界最远的，
                 i++;
             }else{
                 j++;

@@ -1,4 +1,4 @@
-public class leetcode283 {
+public class leetcode283_移动零 {
     public void moveZeroes(int[] nums) {
         int num=0;
         int curindex=0;
@@ -16,7 +16,7 @@ public class leetcode283 {
     }
 
     public static void main(String[] args) {
-        new leetcode283().moveZeroes(new int[]{
+        new leetcode283_移动零().moveZeroes(new int[]{
                 0,1,0,3,12
         });
     }

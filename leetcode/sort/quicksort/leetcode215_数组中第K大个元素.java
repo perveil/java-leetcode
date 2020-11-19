@@ -1,4 +1,4 @@
-package leetcode.sort.quicksort;
+package sort.quicksort;
 
 /*
 * 寻找第k大 等价于寻找第n-k小
