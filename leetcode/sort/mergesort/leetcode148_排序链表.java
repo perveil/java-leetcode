@@ -8,7 +8,7 @@ import LinkedList.ListNode;
 
 import java.util.*;
 
-public class leetcode149_排序链表 {
+public class leetcode148_排序链表 {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) //空或长度为一,切分结束
             return head;

@@ -33,18 +33,12 @@ public class leetcode1604_警告一小时内打卡三次的员工 {
     public boolean isInOnHour(List<Integer> list){
         Arrays.sort(list.toArray()); //时间排序
         for (int i = 0; i <list.size() ; i++) {
-            int starttime=list.get(0);
+            int starttime=list.get(i);
             if (i+2<list.size() && list.get(i+2)<=starttime+60){
                 return true;
             }
             if (starttime>23*60){ //starttime 在晚上11点到12点
-                int j = i+1;
-                for (int count=0; count<2 ; j++,count++) {
-                    if (j>=list.size()){
-                        j=0; //循环
-                    }
-                }
-                if (list.get(j)<=starttime+60){
+                if (list.get((i+2)%list.size())+22*60<=starttime+60){
                     return true;
                 }
             }
