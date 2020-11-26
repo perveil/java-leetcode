@@ -1,4 +1,5 @@
-package sort.bucketsort;/*
+package sort.bucketsort;
+/*
   @Date:2020/10/6 16:40
   @Author:Administrator
 */
@@ -18,8 +19,7 @@ public class leetcode164_最大间隔 {
         int min=Integer.MAX_VALUE;
         int max=Integer.MIN_VALUE;
         int len=nums.length;
-        for (int num:
-             nums) {
+        for (int num: nums) {
             min=Math.min(min,num);
             max=Math.max(max,num);
         }
@@ -47,6 +47,7 @@ public class leetcode164_最大间隔 {
 
     }
     public int bucket_index(int num,int min,int max,int len){
-        return (int) (((num - min) * len) / (max - min));
+        int d = Math.max(1, (max - min) / (len- 1));
+        return  ((num - min)/d);
     }
 }
