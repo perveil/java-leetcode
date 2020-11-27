@@ -53,7 +53,7 @@ public class leetcode421_数组中两个数的最大异或值 {
             int maxNum = nums[0];
             for(int num : nums) maxNum = Math.max(maxNum, num);
             int L = (Integer.toBinaryString(maxNum)).length();
-            int n = nums.length, bitmask = 1 << L;
+            int n = nums.length, bitmask = 1 << L; // 1 << L,1向右移动五位
             String [] strNums = new String[n];
             for(int i = 0; i < n; ++i) {
                 strNums[i] = Integer.toBinaryString(bitmask | nums[i]).substring(1);
@@ -87,10 +87,4 @@ public class leetcode421_数组中两个数的最大异或值 {
         }
     }
 
-    public static void main(String[] args) {
-//        new leetcode421_数组中两个数的最大异或值.Solution().findMaximumXOR(new int[]{
-//                3,10,5,25,2,8
-//        });
-        System.out.println((1<<5)|3);
-    }
 }
