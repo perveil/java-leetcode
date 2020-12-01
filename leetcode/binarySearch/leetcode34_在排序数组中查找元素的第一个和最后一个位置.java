@@ -1,8 +1,8 @@
 package leetcode.binarySearch;
 
-public class leetcode34 {
+public class leetcode34_在排序数组中查找元素的第一个和最后一个位置 {
     public static void main(String[] args) {
-        new leetcode34().searchRange(
+        new leetcode.binarySearch.leetcode34_在排序数组中查找元素的第一个和最后一个位置().searchRange(
                 new int[]{
                         1
                 },1
@@ -13,7 +13,7 @@ public class leetcode34 {
         result[0]=result[1]=-1;
         int head=0;
         int tail=nums.length-1;
-        while(head<=tail){
+        while(head<=tail){ //head>tail 推出循环,tail==head 的时候也可能存在解
             int md=(head+tail)/2;
             if(target==nums[md]){
                 result[0]=result[1]=md;

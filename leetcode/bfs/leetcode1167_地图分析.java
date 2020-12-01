@@ -52,4 +52,5 @@ public class leetcode1167_地图分析 {
         return x >= 0 && x < rows && y >= 0 && y < cols;
     }
 
+
 }
