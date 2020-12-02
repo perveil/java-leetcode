@@ -18,6 +18,7 @@ public class leetcode402_移掉K位数字 {
             }
             stack.push(c-'0');
         }
+        //没有删除完毕
         for (int i = 0; i < k; ++i) {
             stack.pop();
         }
