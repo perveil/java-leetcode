@@ -46,7 +46,6 @@ public class leetcode200_岛屿数量I {
                             roots[p]=q;
                             res--;
                         }
-
                     }
                 }
             }
