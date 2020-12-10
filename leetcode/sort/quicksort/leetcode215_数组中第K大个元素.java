@@ -31,8 +31,8 @@ public class leetcode215_数组中第K大个元素 {
             nums[j] = nums[i];
             nums[i] = t;
         }
-        nums[lo] = nums[j];
-        nums[j] = v; // j/i 为最终位置
+        nums[lo] = nums[j]; //nums[j] 为左半部分（小于v）的最后一个元素，和nums[lo] 交换
+        nums[j] = v;        // j/i 为nums[lo]最终位置
         return j;
     }
 

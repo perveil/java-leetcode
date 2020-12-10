@@ -41,4 +41,10 @@ public class interview40_前K个最小元素 {
         nums[j] = v;
         return j;
     }
+
+    public static void main(String[] args) {
+        new interview40_前K个最小元素().partition(new int[]{
+                4,2,3,1,5,6,0
+        },0,6);
+    }
 }
