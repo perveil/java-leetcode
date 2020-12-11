@@ -1,4 +1,4 @@
-package bfs;
+package graph.bfs;
 /*
   @Date:2020/11/8 19:37
   @Author:Administrator

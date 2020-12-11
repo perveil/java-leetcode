@@ -2,7 +2,7 @@ package leetcode.dp;
 
 import java.util.*;
 /*
- *  递归写法(bfs)
+ *  递归写法(graph.bfs)
  *1. 如果字符串p.eq(s)==true return true
  *2.如果p=*                return true
  *3.if(p.length==0 || s.length==0) return false

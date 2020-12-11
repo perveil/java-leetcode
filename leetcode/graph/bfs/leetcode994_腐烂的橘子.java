@@ -1,4 +1,4 @@
-package bfs;
+package graph.bfs;
 
 /*
 *  多源bfs

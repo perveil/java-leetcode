@@ -1,7 +1,7 @@
-package dfs;
+package graph.dfs;
 /*
 * 两种思路：
-*  1.dfs/bfs
+*  1.graph.dfs/graph.bfs
 *  2.并查集
 * */
 public class leetcode200 {

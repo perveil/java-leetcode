@@ -1,4 +1,4 @@
-package dfs;
+package graph.dfs;
 
 import java.util.*;
 
@@ -19,7 +19,7 @@ public class leetcode126_单词路径 {
         dist.put(beginWord,1);
         int len=bfs(beginWord,endWord,neborMap,dist);
         /*
-        * dfs findPaths
+        * graph.dfs findPaths
         * */
 
         List<String> path=new LinkedList<>();
@@ -68,7 +68,7 @@ public class leetcode126_单词路径 {
         return 0;
     }
     /*
-    * leetcode 126 dfs 寻找路径长度为len的路径
+    * leetcode 126 graph.dfs 寻找路径长度为len的路径
     * */
     public void dfs_path(String beginWord, String endWord, Map<String,List<String>> neborMap,HashMap<String, Boolean> visited,int len,int curlen,List<String> path) {
         if (beginWord.equals(endWord) && curlen==len){

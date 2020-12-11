@@ -46,7 +46,7 @@ public class leetcode399_除法求值 {
                 res[i++]=1/equationsMap.get(fenzi+fenmu);
                 continue;
             }
-            //情况1 dfs
+            //情况1 graph.dfs
             Map<String,Boolean> markedMap=new HashMap<>();// <Key,Value> key是分子、Value是分母的集合
             Double d= dfs(fenzi,fenmu,markedMap);
             if (d!=0){

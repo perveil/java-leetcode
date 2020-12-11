@@ -1,9 +1,8 @@
-package dfs;/*
+package graph.dfs;/*
   @Date:2020/10/9 11:34
   @Author:Administrator
 */
 
-import java.util.*;
 /*
 ·如果一个地雷（'M'）被挖出，游戏就结束了- 把它改为 'X'。
 如果一个没有相邻地雷的空方块（'E'）被挖出，修改它为（'B'），并且所有和其相邻的未挖出方块都应该被递归地揭露，直到遇见地雷或者相邻地雷的空方块

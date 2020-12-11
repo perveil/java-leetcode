@@ -1,4 +1,4 @@
-package dfs;
+package graph.dfs;
 /*
   @Date:2020/10/9 16:51
   @Author:Administrator
@@ -8,7 +8,6 @@ package dfs;
 *   · 游向上下左右四个相邻的平台的必要条件是水漫过两个平台
 *   · 平台间移动是不花世界的，而需要花时间的是等待水漫过起始平台和目标平台
 * */
-import java.util.*;
 
 public class leetcode778_水位上升的泳池中游泳 {
     private int rows;

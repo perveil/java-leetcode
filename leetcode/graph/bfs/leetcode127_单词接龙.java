@@ -1,4 +1,4 @@
-package bfs;/*
+package graph.bfs;/*
   @Date:2020/11/5 9:27
   @Author:Administrator
 */
@@ -17,7 +17,7 @@ public class leetcode127_单词接龙 {
         }
         HashMap<String, Integer> dist = new HashMap<String, Integer>();
         dist.put(beginWord,1);
-        int len=bfs(beginWord,endWord,neborMap,dist); //bfs 求最短距离
+        int len=bfs(beginWord,endWord,neborMap,dist); //graph.bfs 求最短距离
         return len;
     }
     public List<String> similarWordList(String beginWord, List<String> wordList) {

@@ -1,4 +1,4 @@
-package leetcode.graph;
+package graph.拓扑排序;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,7 +15,7 @@ import java.util.Queue;
 *    2.减一后邻接节点的入度=0时，入队
 * 4.每一次出队时，执行numCourse--；
 * */
-public class leetcode207 {
+public class leetcode207_课程表 {
     /*
     * 想要学习0，必须先学习1 [0,1]  1->0
     * */

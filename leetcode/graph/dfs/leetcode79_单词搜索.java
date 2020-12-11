@@ -1,4 +1,4 @@
-package dfs;
+package graph.dfs;
 /*
 *  直接回溯超时，使用dfs
 *
@@ -20,7 +20,7 @@ public class leetcode79_单词搜索 {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 if (board[i][j]==charOfWord[0]){
-                    if (dfs(i, j, 0)) { //dfs 入口
+                    if (dfs(i, j, 0)) { //graph.dfs 入口
                         return true;
                     }
                 }

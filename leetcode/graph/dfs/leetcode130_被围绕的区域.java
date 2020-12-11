@@ -1,4 +1,4 @@
-package dfs;
+package graph.dfs;
 
 public class leetcode130_被围绕的区域 {
     public void solve(char[][] board) {

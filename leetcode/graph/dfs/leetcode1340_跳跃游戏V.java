@@ -1,10 +1,9 @@
-package dfs;
+package graph.dfs;
 /*
   @Date:2020/10/12 15:18
   @Author:Administrator
 */
 
-import java.util.*;
 //题意是往下跳，反向思考：往上爬
 public class leetcode1340_跳跃游戏V {
     int []arr;

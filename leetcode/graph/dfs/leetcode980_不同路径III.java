@@ -1,9 +1,8 @@
-package dfs;/*
+package graph.dfs;/*
   @Date:2020/10/30 12:43
   @Author:Administrator
 */
 
-import java.util.*;
 //每一个无障碍（0/1）方格都要通过一次，但是一条路径中不能重复通过同一个方格（访问过的不能再访问）
 public class leetcode980_不同路径III {
     int[][] directions = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
