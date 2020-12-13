@@ -1,0 +1,54 @@
+```java
+
+class solution{
+//查找某值
+    int binarySearch(int[] nums, int target) {
+        int left = 0; 
+        int right = nums.length - 1; // 注意
+    
+        while(left <= right) {
+            int mid = left + (right - left) / 2;
+            if(nums[mid] == target)
+                return mid; 
+            else if (nums[mid] < target)
+                left = mid + 1; // 注意
+            else if (nums[mid] > target)
+                right = mid - 1; // 注意
+        }
+        return -1;
+     }
+//查找大于等于target左侧边界 
+    int binarySearch(int[] nums, int target) {
+        int left = 0; 
+        int right = nums.length; // 注意
+    
+        while(left < right) {
+            int mid = left + (right - left) / 2;
+            if(nums[mid] == target)
+                right=mid;  //mid已经搜索过了，但是搜索区间是左闭右开，所以right=mid
+            else if (nums[mid] < target)
+                left = mid + 1; // 注意
+            else if (nums[mid] > target)
+                right = mid; // 注意
+        }
+        if (left == nums.length) return -1;
+        return left;
+     }
+//查找小于等于target右侧边界
+    int binarySearch(int[] nums, int target) {
+        int left = 0; 
+        int right = nums.length; // 注意
+        while(left < right) { //终止条件是left==right
+            int mid = left + (right - left) / 2;
+            if(nums[mid] == target)
+                left=mid+1;  //mid 已经搜索过了，搜索区间是左闭右开，所以需要mid+1
+            else if (nums[mid] < target)
+                left = mid+1; // 注意
+            else if (nums[mid] > target)
+                right = mid; // 注意
+        }
+        if (left == 0) return -1;
+        return nums[left-1] == target ? (left-1) : -1;
+     }
+}
+```
