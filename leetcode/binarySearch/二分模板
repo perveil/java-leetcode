@@ -1,3 +1,4 @@
+https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/er-fen-cha-zhao-xiang-jie
 ```java
 
 class solution{
@@ -31,7 +32,7 @@ class solution{
             else if (nums[mid] > target)
                 right = mid; // 注意
         }
-        if (left == nums.length) return -1;
+        if (left >= nums.length || nums[left]!=target) return -1;
         return left;
      }
 //查找小于等于target右侧边界
