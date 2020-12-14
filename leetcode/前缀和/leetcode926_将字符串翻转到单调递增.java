@@ -19,7 +19,7 @@ public class leetcode926_将字符串翻转到单调递增 {
             //System.out.println(presum[i]+n-i-(presum[n]-presum[i]));
             res=Math.min(res,presum[i]+n-i-(presum[n]-presum[i]));
             //翻转前边的1 的次数 presum[i]
-            //翻转后边的0 的次数 n-i+1-(persum[n]-persum[i-1])
+            //翻转后边的0 的次数 n-i+1-(persum[n]-persum[i])
         }
         return  res;
     }
