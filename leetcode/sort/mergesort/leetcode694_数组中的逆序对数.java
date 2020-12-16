@@ -1,4 +1,4 @@
-package leetcode.sort.mergesort;
+package sort.mergesort;
 /*
   @Date:2020/4/24 9:50
   @Author:Administrator
