@@ -1,8 +1,8 @@
-package leetcode.dp;
+package dp;
 /*
 *  最长回文子串
 * */
-public class leetcode5 {
+public class leetcode5_最长回文子串 {
     public String longestPalindrome(String s) {
         String reverse = new StringBuffer(s).reverse().toString(); //字符串倒置
         return longestCommonSubsequence(s,reverse);
@@ -29,7 +29,6 @@ public class leetcode5 {
                 }
                 /*
                 * 判断逆转后的坐标是否对应
-                *
                 * */
                 if (dp[i][j]>maxLen){
                     int beforeRev = n - 1 - j; //逆转之前的坐标

@@ -1,10 +1,11 @@
-package leetcode.dp;
+package dp;
 
 /*
 * 最长公共子序列
 *
 * */
 public class leetcode1143_最长公共子序列 {
+    //子序列 vs 子串
     public int longestCommonSubsequence(String text1, String text2) {
         int n=text1.length();
         int m=text2.length();
