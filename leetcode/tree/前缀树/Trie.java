@@ -1,4 +1,4 @@
-package leetcode.tree.Trie;
+package tree.前缀树;
 /*
 * 字典树/前缀树/
 * */
@@ -10,14 +10,13 @@ public class Trie {
     /** Inserts a word into the trie. */
     public void insert(String word) {
         Trie temp=this;
-        for (char c:
-             word.toCharArray()) {
+        for (char c: word.toCharArray()) {
             if (temp.child[c-'a']==null){  //c不在tmp的子节点中
                 temp.child[c-'a']=new Trie();
             }
             temp=temp.child[c-'a'];
         }
-        temp.isEndOFWord=true; //temp 已经到了word的最后一个字符
+        temp.isEndOFWord=true; //temp已经到了word的最后一个字符
     }
 
     /** Returns if the word is in the trie. */
