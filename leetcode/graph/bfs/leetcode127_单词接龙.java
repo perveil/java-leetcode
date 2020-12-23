@@ -61,6 +61,6 @@ public class leetcode127_单词接龙 {
         for (String s: strs) {
             list.add(s);
         }
-        int minlength=new leetcode127_单词接龙().ladderLength("hit","cog",list);
+        new leetcode127_单词接龙().ladderLength("hit","cog",list);
     }
 }
