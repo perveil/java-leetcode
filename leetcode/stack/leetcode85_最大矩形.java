@@ -1,4 +1,4 @@
-package leetcode.stack;
+package stack;
 
 public class leetcode85_最大矩形 {
     /*

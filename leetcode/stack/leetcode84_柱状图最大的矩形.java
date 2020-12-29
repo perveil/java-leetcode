@@ -1,4 +1,4 @@
-package leetcode.stack;
+package stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -16,7 +16,7 @@ public class leetcode84_柱状图最大的矩形 {
         for(int i=0;i<new_heights.length;i++){
             /*
             * new_heights[stack.peek()]>new_heights[i]  此时违反单调递增栈规则。也就是说，遇到了右边比new_heights[stack.peek()]小的节点
-            * 然后 new_heights[stack.peek()-1] 是左边小于new_heights[stack.peek()]的值
+            * 然后 new_heights[stack.pop().peek()] 是左边小于new_heights[stack.peek()]的值
             * */
             while(!stack.isEmpty()&&new_heights[stack.peek()]>new_heights[i]){
                 int cur=stack.pop();    //弹出当前节点
@@ -27,5 +27,11 @@ public class leetcode84_柱状图最大的矩形 {
             stack.push(i);
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        new leetcode84_柱状图最大的矩形().largestRectangleArea(new int[]{
+                2,1,5,6,2,3
+        });
     }
 }
