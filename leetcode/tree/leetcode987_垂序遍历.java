@@ -1,8 +1,7 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+
 import tree.*;
 /*
 *          3(0,0)
@@ -12,6 +11,7 @@ import tree.*;
 * 首先中序遍历获得所有节点的坐标，再根据坐标的x排序
 * */
 public class leetcode987_垂序遍历 {
+
     List<List<Integer>> res=new ArrayList<>();
     List<Position> positions=new ArrayList<>();
     public List<List<Integer>> verticalTraversal(TreeNode root) {
