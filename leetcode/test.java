@@ -1,33 +1,54 @@
 import java.util.*;
 
 public class test {
-    public int minSubarray(int[] nums, int p) {
-        //求前缀和
+    public int waysToMakeFair(int[] nums) {
         int len=nums.length;
-        long sum=0;
-        for (int i = 0; i <len; i++) {
+        int [] left=new int[len];  //left[i]: 0...i 中奇数索引数的和
+        int [] right=new int[len]; //right[i] : i..len-1 中奇数索引数的和
+
+        int [] leftSum=new int[len];  //leftSum[i]: 0...i 数的和
+        int [] rightSum=new int[len]; //rightSum[i] : i..len-1 数的和
+        int sum=0;
+        for(int i=0;i<len;i++){
             sum+=nums[i];
+            leftSum[i]=sum;
         }
-        if (sum%p==0) return 0;
-        if (sum<p) return -1; //不可能
-        long rest=sum%p; //寻找数组和%p==rest的子数组，整体数组减去该子数组
-        int res=nums.length;
-        Map<Long,Integer> map=new HashMap<>(); // sum[0...i]%p为Key的子数组左侧边界
-        map.put((long)0,0);
         sum=0;
-        for (int i = 0; i <len ; i++) { //从前向后遍历
+        for(int i=len-1;i>-1;i--){
             sum+=nums[i];
-            Integer index=map.get((sum-rest)%p);
-            if (index!=null){
-                res=Math.min(res,i-index);
-            }
-            map.put(sum % p, i); //将右侧边界赋值给左侧边界
+            rightSum[i]=sum;
         }
-        return res==nums.length?-1:res;
+        sum=0;
+        for(int i=0;i<len;i++){
+            sum+=i%2==0?0:nums[i];
+            left[i]=sum;
+        }
+        sum=0;
+        for(int i=len-1;i>-1;i--){
+            sum+=i%2==0?0:nums[i];
+            right[i]=sum;
+        }
+        int res=0;
+        for(int i=0;i<len;i++){ //删除i
+            int sumOfeven=0;
+            int sumOfodd=0;
+            if(i>0){
+                sumOfodd+=left[i-1];
+                sumOfeven+=(leftSum[i-1]-left[i-1]);
+            }
+            if(i<len-1){
+                sumOfeven+=right[i+1];
+                sumOfodd+=(rightSum[i+1]-right[i+1]);
+            }
+            if(sumOfeven==sumOfodd){
+                res++;
+            }
+        }
+        return res;
     }
     public static void main(String[] args) {
-        new test().minSubarray(new int[]{
-                1,1,1
-        },2);
+        new test().waysToMakeFair(new int[]{
+                2,1,6,4
+        });
     }
 }
